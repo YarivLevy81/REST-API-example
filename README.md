@@ -91,20 +91,19 @@ The REST API to the example app is described below.
 
 ### Request
 
-`GET /thing/id`
+`GET /users`
 
-    curl -i -H 'Accept: application/json' http://localhost:7000/thing/9999
+    curl -i -H 'Accept: application/json' http://127.0.0.1:5000/users
 
 ### Response
 
-    HTTP/1.1 404 Not Found
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 404 Not Found
-    Connection: close
+    HTTP/1.0 200 OK
     Content-Type: application/json
-    Content-Length: 35
+    Content-Length: 43
+    Server: Werkzeug/0.16.0 Python/3.8.2
+    Date: Wed, 13 May 2020 14:57:09 GMT
 
-    {"status":404,"reason":"Not found"}
+    [{"user_id": 420666777420, "username": "Yariv Levy"}]
 
 ## Create another new Thing
 
